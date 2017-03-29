@@ -1,15 +1,43 @@
 <template>
   <div id="app">
-    <!-- <hello></hello> -->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/home">Brand</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+          <ul class="nav navbar-nav">
+            <li class="active"><router-link to="/home">Home</router-link></li>
+            <li><router-link to="/about">About</router-link></li>
+          </ul>
+          <!-- <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form> -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><router-link to="/User">User</router-link></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div class="nav">
-         <!-- 使用 router-link 组件来导航. -->
+        <!-- 使用 router-link 组件来导航. -->
         <!-- 通过传入 `to` 属性指定链接. -->
         <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
-        <ul>
+        <!-- <ul>
           <li><router-link to="/home">Home</router-link></li>
           <li><router-link to="/about">About</router-link></li>
           <li><router-link to="/User">User</router-link></li>
-        </ul>
+        </ul> -->
     </div>
      <div class="main">
      <!-- 路由匹配到的组件将渲染在这里 -->
@@ -30,38 +58,6 @@ export default {
 </script>
 
 <style>
-body{
-  background-color: #f8f8ff;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  color: #2c3e50;
-}
 
-
-.nav{
-  position: fixed;
-    width: 108px;
-    left: 40px;
-}
-.nav ul{
-list-style: none;
- margin: 0;
-    padding: 0;
-}
-.nav ul li{
-  width: 108px;
-  height: 48px;
-  line-height: 48px;
-border:1px solid #dadada;
-text-align: center;
-}
-.nav ul li a{
-  text-decoration: none;
-}
-
-.main{
-    height: 400px;
-    margin-left: 180px;
-    margin-right: 25px;
-}
 
 </style>
