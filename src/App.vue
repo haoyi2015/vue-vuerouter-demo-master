@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav class="navbar navbar-inverse">
+    <!-- <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
@@ -17,18 +17,19 @@
             <li class="active"><router-link to="/home">Home</router-link></li>
             <li><router-link to="/about">About</router-link></li>
           </ul>
-          <!-- <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form> -->
           <ul class="nav navbar-nav navbar-right">
             <li><router-link to="/User">User</router-link></li>
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> -->
+    <div class="nav-tabs-alt">
+        <ul class="nav nav-tabs nav-justified">
+          <li class="active"><router-link to="/home">Home</router-link></li>
+          <li><router-link to="/about">About</router-link></li>
+          <li><router-link to="/User">User</router-link></li>
+        </ul>
+      </div>
     <div class="nav">
         <!-- 使用 router-link 组件来导航. -->
         <!-- 通过传入 `to` 属性指定链接. -->
@@ -58,6 +59,12 @@ export default {
 </script>
 
 <style>
-
-
+  .navbar,.container-fluid{
+    border-radius: 0;
+    background: #23b7e5;
+    border:1px solid #23b7e5;
+  }
+  .container-fluid a{
+    color: #fff
+  }
 </style>

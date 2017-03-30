@@ -3,8 +3,9 @@
     <h1>{{ msg }}</h1>
     <ul class="detail-box">
       <li v-for="detail in detailData">
-          <span v-bind:data-code="detail.code" v-on:click="code(this,detail.code)">code</span>
-          <span>{{detail.name}}</span>
+          <p v-bind:data-code="detail.code" v-on:click="code(this,detail.code)">code</p>
+          <p>{{detail.name}}</p>
+          <a v-link="{name: 'user', params: 1}">This is a user whose id is 1</a>
       </li>
     </ul>
   </div>
@@ -15,12 +16,12 @@ export default {
   name: 'detail',
   data () {
     return {
-      msg: 'detail',
+      msg: '----',
       detailData:[]
     }
   },
   created:function(){  //这里mounted和created生命周期函数区别
-     this.$http.get('http://192.168.252.1:8006/src/mock/detail.json', {}, {
+     this.$http.get('../static/mock/detail.json', {}, {
         headers: {
 
         },
@@ -38,7 +39,7 @@ export default {
   methods:{
     code: function(e,c){
 
-      //过滤当前元素
+      //过滤当前选中的元素
       var item =this.detailData,
           _code =c,
           arr =[];
