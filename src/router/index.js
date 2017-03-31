@@ -30,6 +30,9 @@ const router = new VueRouter({
 	  	path: '/bomb', component: require('../components/Bomb.vue')
 	  },
 	  {
+	  	path: '/student', component: require('../components/Student.vue')
+	  },
+	  {
 	  	path:'*',redirect:'/home'
 	  }
   ]

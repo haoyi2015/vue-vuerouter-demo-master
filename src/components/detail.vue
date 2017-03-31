@@ -5,7 +5,6 @@
       <li v-for="detail in detailData">
           <p v-bind:data-code="detail.code" v-on:click="code(this,detail.code)">code</p>
           <p>{{detail.name}}</p>
-          <a v-link="{name: 'user', params: 1}">This is a user whose id is 1</a>
       </li>
     </ul>
   </div>

@@ -28,6 +28,7 @@
           <li class="active"><router-link to="/home">Home</router-link></li>
           <li><router-link to="/about">About</router-link></li>
           <li><router-link to="/User">User</router-link></li>
+          <li><router-link to="/student">studentList</router-link></li>
         </ul>
       </div>
     <div class="nav">
